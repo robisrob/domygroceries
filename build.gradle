@@ -1,11 +1,28 @@
 apply plugin: 'java'
-apply plugin: 'war'
-apply plugin: 'jetty'
+apply plugin: 'application'
+
+mainClassName = 'com.helpingoldies.infrastructure.DoMyGroceriesApplication'
+
+[compileJava, compileTestJava]*.options*.encoding = 'UTF-8'
+
+repositories {
+    mavenCentral()
+}
+
+project.ext {
+    dropwizardVersion = '0.8.1'
+}
 
 repositories {
     mavenCentral()
 }
 
 dependencies {
-    compile 'org.jboss.resteasy:resteasy-jaxrs:3.0.7.Final'
+   compile (
+       'io.dropwizard:dropwizard-core:' + dropwizardVersion
+    )
+}
+
+run {
+    args 'server'
 }

@@ -1,11 +1,8 @@
-package com.helpingoldies.view.rest;
+package com.helpingoldies.view;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 
-/**
- * Created by rob on 3/05/15.
- */
 @Path("/tests")
 public class TestResource {
 

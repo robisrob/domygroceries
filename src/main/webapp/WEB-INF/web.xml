@@ -12,7 +12,7 @@
         </servlet-class>
         <init-param>
             <param-name>javax.ws.rs.Application</param-name>
-            <param-value>com.helpingoldies.infrastructure.rest.DoMyGroceriesApplication</param-value>
+            <param-value>com.helpingoldies.infrastructure.DoMyGroceriesApplication</param-value>
         </init-param>
     </servlet>
 
