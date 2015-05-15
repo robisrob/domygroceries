@@ -10,7 +10,7 @@ import javax.validation.constraints.Min;
 public class DoMyGroceriesConfiguration extends Configuration {
 
     @JsonProperty @NotEmpty
-    public String mongohost = "localhost";
+    public String mongohost = "db";
 
     @JsonProperty
     public int mongoport = 27017;

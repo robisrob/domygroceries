@@ -13,7 +13,7 @@ public class TestResource {
 
     @GET
     public String getHelloWorld(){
-        MongoClient mongoClient = new MongoClient("localhost");
+        MongoClient mongoClient = new MongoClient("db");
 
         MongoDatabase database = mongoClient.getDatabase("domygroceriesdb");
         MongoCollection<Document> testCollection = database.getCollection("test");
