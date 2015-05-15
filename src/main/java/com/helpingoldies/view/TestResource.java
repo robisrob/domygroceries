@@ -17,8 +17,7 @@ public class TestResource {
 
         MongoDatabase database = mongoClient.getDatabase("domygroceriesdb");
         MongoCollection<Document> testCollection = database.getCollection("test");
-
-
+        
         return testCollection.find().first().toJson();
     }
 
