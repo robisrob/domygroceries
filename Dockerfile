@@ -14,4 +14,4 @@ RUN apt-get -y install oracle-java8-installer
 ENV JAVA_HOME /usr/lib/jvm/java-8-oracle/bin
 RUN ln -s /usr/lib/jvm/java-8-oracle /usr/lib/jvm/default-java
 RUN apt-get -y install gradle
-RUN git clone https://github.com/robisrob/domygroceries.git 
+RUN git clone https://github.com/robisrob/domygroceries.git

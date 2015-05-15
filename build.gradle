@@ -11,6 +11,7 @@ repositories {
 
 project.ext {
     dropwizardVersion = '0.8.1'
+    mongodbVersion = '3.0.1'
 }
 
 repositories {
@@ -19,10 +20,12 @@ repositories {
 
 dependencies {
    compile (
-       'io.dropwizard:dropwizard-core:' + dropwizardVersion
+       'io.dropwizard:dropwizard-core:' + dropwizardVersion,
+           'org.mongodb:mongodb-driver:' + mongodbVersion
     )
 }
 
 run {
     args 'server'
 }
+
