@@ -1,5 +1,8 @@
 apply plugin: 'java'
 apply plugin: 'application'
+apply plugin: 'com.github.johnrengelman.shadow'
+apply plugin: 'maven-publish'
+
 
 mainClassName = 'com.helpingoldies.infrastructure.DoMyGroceriesApplication'
 
@@ -14,18 +17,52 @@ project.ext {
     mongodbVersion = '3.0.1'
 }
 
-repositories {
-    mavenCentral()
+
+buildscript {
+    repositories { jcenter() }
+    dependencies {
+        classpath 'com.github.jengelman.gradle.plugins:shadow:1.2.1'
+    }
 }
 
 dependencies {
-   compile (
+    compile (
        'io.dropwizard:dropwizard-core:' + dropwizardVersion,
-           'org.mongodb:mongodb-driver:' + mongodbVersion
+           'org.mongodb:mongodb-driver:' + mongodbVersion,
     )
+}
+
+jar {
+    manifest {
+        attributes 'Main-Class': mainClassName
+    }
 }
 
 run {
     args 'server'
+}
+
+shadowJar {
+    baseName = 'dogmygroceries'
+    classifier = ''
+}
+
+
+
+publishing {
+    publications {
+        shadow(MavenPublication) {
+            from components.shadow
+            groupId = 'com.helpingoldies'
+            artifactId = 'dogmygroceries'
+            version = '0-SNAPSHOT'
+        }
+    }
+
+    repositories {
+        maven {
+            url "file://home/rob/Projects/maven_repo"
+        }
+    }
 }
 
