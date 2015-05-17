@@ -6,7 +6,7 @@
         <connection>scm:git:https://github.com/robisrob/domygroceries.git</connection>
         <developerConnection>scm:git:git@github.com:robisrob/domygroceries.git</developerConnection>
         <url>https://github.com/robisrob/domygroceries.git</url>
-        <tag>HEAD</tag>
+        <tag>domygroceries-0.0.9</tag>
     </scm>
 
     <distributionManagement>
@@ -19,7 +19,7 @@
 
     <groupId>com.helpingoldies</groupId>
     <artifactId>domygroceries</artifactId>
-    <version>0.0.9-SNAPSHOT</version>
+    <version>0.0.9</version>
 
 
     <profiles>
