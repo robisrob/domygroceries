@@ -19,7 +19,7 @@
 
     <groupId>com.helpingoldies</groupId>
     <artifactId>domygroceries</artifactId>
-    <version>0.0.10-SNAPSHOT</version>
+    <version>0.0.01-SNAPSHOT</version>
 
 
     <profiles>
