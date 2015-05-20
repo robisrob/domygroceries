@@ -4,3 +4,5 @@ build
 .idea
 *.iml
 *~
+*target
+dependency-reduced-pom.xml
