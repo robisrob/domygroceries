@@ -19,7 +19,7 @@ project.ext {
 
 
 buildscript {
-    repositories { jcenter() }
+    repositories { jcenter{url "https://jcenter.bintray.com"} }
     dependencies {
         classpath 'com.github.jengelman.gradle.plugins:shadow:1.2.1'
     }
