@@ -1,0 +1,5 @@
+database:
+  driverClass: com.mysql.jdbc.Driver
+  user: applicationuser
+  password: password
+  url: jdbc:mysql://localhost/domygroceries
